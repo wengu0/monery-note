@@ -51,16 +51,5 @@ function valid_email($address) {
         return false;
     }
 }
-function title_out($fand_id){
-    $conn = db_connect();
-    $id = $fand_id;
-    $result = $conn->query('select title from category where id ={$id}');
-    foreach ($result as $key => $value) {
-        foreach ($value as $k => $v) {
-               $arr[$k] = $v;
-                 }
-               $cad=$arr['id']; }
-               return $cad;
-}
 
 ?>

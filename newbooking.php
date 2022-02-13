@@ -20,7 +20,7 @@ session_start();
 </head>
 <body>
 <header class="mui-bar mui-bar-nav mui-bar-nav-bg">
-    <a id="icon-menu" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <a id="icon-menu" class="mui-icon mui-icon-left-nav mui-pull-left" href="index.php"></a>
     <a class="mui-action-back mui-icon  mui-pull-right mui-a-color">记一笔</a>
     <h1 class="mui-title"></h1>
 </header>

@@ -1,3 +1,13 @@
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />  
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+ 
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8"> </script>
+    <script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <body>
 <?php
 //调用文件连接数据库
 require_once('connt.php');
@@ -24,7 +34,10 @@ foreach ($id2 as $key => $value) {
 $aid=$arr['id'];
 }
 if (!filled_out($_POST)) {
-    echo "<script>alert('表单没有填写完整')location='newbooking.php'</script>";
+    echo "<script>mui.plusReady(function(){  
+      mui.alert('没有填写完整',function () {
+        window.location.href='newbooking.php'});
+         });</script>";
   }
 else {
     //写入明细
@@ -35,3 +48,4 @@ else {
     }
 }
 ?>
+</body>

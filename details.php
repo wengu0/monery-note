@@ -23,7 +23,7 @@ session_start();
 </head>
 <body>
 <header class="mui-bar mui-bar-nav mui-bar-nav-bg">
-    <a id="icon-menu" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <a id="icon-menu" class="mui-icon mui-icon-left-nav mui-pull-left" href="index.php"></a>
     <a class="mui-action-back mui-icon  mui-pull-right mui-a-color">详情</a>
     <h1 class="mui-title"></h1>
 </header>
@@ -156,7 +156,7 @@ session_start();
 			});
                 
             
-			// 点击北京回到原点
+			// 点击首页回到原点
 			document.querySelectorAll('.mui-control-item')[2].addEventListener('tap', function() {
 				mui('.mui-scroll-wrapper').scroll().scrollTo(0, 0, 900);
 			});
@@ -164,5 +164,6 @@ session_start();
 			document.querySelectorAll('.mui-control-item')[3].addEventListener('tap', function() {
 				mui('.mui-scroll-wrapper').scroll().scrollTo(-80, 0, 900);
 			});
+			
 		</script>
 </html>

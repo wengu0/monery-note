@@ -10,6 +10,15 @@ $year_day1 =date('Y-01-01');
 $year_day2 =date('Y-12-31');
 
 session_start();
+//验证cookie是否有值
+if (isset($_COOKIE['username'])) {
+    # 若记住了用户信息,则直接传给Session
+    $_SESSION['username'] = $_COOKIE['username'];
+    $_SESSION['islogin'] = 1;
+    }
+    if (!isset($_SESSION['islogin'])) {
+		header('location:login.php');
+    } 
 $res = $link->query("select* from user where username ='{$_SESSION["username"]}'");
 foreach ($res as $key => $value) {
 	foreach ($value as $k => $v) {
@@ -53,7 +62,7 @@ $result10=$link->query("select* from booking where postdate between '{$year_day1
 </head>
 <body>
 	
-	<div style="background:url('bc.png') no-repeat;width:500px;height:170px">
+	<div style="background:url('bc.png') no-repeat;width:100%;height:170px">
     <?php
      $sum_get =0;
 	foreach ($result1 as $key => $value) {
@@ -154,30 +163,30 @@ $result10=$link->query("select* from booking where postdate between '{$year_day1
     </div>
 	<ul class="mui-table-view">
 	    <li class="mui-table-view-cell">
-	        <a class="mui-navigate-right"><div>
+	        <a class="mui-navigate-right" href="index1.php"><div>
 			<div class="black" style="float:left">今天</div><div style="float: right; font-size:x-small;color:red"><?php echo $today_out ?>&nbsp;&nbsp;&nbsp;&nbsp;</div><br></div>
 			<div><?php echo"<div style='float:left' class='p'>".$today."</div>"; ?><div style="float: right;font-size:x-small;color:green"><?php echo $today_get ?>&nbsp;&nbsp;&nbsp;&nbsp;</div></div></a>
 	    </li>
 	    <li class="mui-table-view-cell">
-	        <a class="mui-navigate-right"><div>
+	        <a class="mui-navigate-right" href="index2.php"><div>
 				<div class="black" style="float:left">本周</div><div style="float: right; font-size:x-small;color:red"><?php echo $week_out ?>&nbsp;&nbsp;&nbsp;&nbsp;</div><br></div><div><?php 
 			echo"<div style='float:left' class='p'>".$week_day1."-";
             echo $week_day2."</div>";?><div style="float: right;font-size:x-small;color:green"><?php echo $week_get ?>&nbsp;&nbsp;&nbsp;&nbsp;</div></div></a>
 	    </li>
 	    <li class="mui-table-view-cell">
-	        <a class="mui-navigate-right"><div>
+	        <a class="mui-navigate-right" href="index3.php"><div>
             <div class="black" style="float:left">本月</div><div style="float: right; font-size:x-small;color:red"><?php echo $month_out ?>&nbsp;&nbsp;&nbsp;&nbsp;</div><br></div><?php 
 			echo"<div style='float:left' class='p'>".date("Y-m-d ",mktime(0, 0 , 0,date("m"),1,date("Y")))."-";
             echo date("Y-m-d",mktime(23,59,59,date("m"),date("t"),date("Y")))."</div>"; ?><div style="float: right;font-size:x-small;color:green"><?php echo $month_get ?>&nbsp;&nbsp;&nbsp;&nbsp;</div></a>
 	    </li>
 		
 		<li class="mui-table-view-cell">
-		    <a class="mui-navigate-right"><div>
+		    <a class="mui-navigate-right" href="index4.php"><div>
 			<div class="black" style="float:left">今年</div><div style="float: right; font-size:x-small;color:red"><?php echo $year_out ?>&nbsp;&nbsp;&nbsp;&nbsp;</div><br></div><?php 
 			echo"<div style='float:left' class='p'>".date('Y-01-01')."-"; echo date('Y-12-31')."</div>";?><div style="float: right;font-size:x-small;color:green"><?php echo $year_get ?>&nbsp;&nbsp;&nbsp;&nbsp;</div></a>
 		</li>
 		<li class="mui-table-view-cell">
-		    <a class="mui-navigate-right"><div>
+		    <a class="mui-navigate-right" href="index.php"><div>
 			<div class="black" style="float:left">所有</div><div style="float: right; font-size:x-small;color:red"><?php echo $sum_out ?>&nbsp;&nbsp;&nbsp;&nbsp;</div><br><div style="float: right;font-size:x-small;color:green"><?php echo $sum_get ?>&nbsp;&nbsp;&nbsp;&nbsp;</div></div><?php echo"<div style='float:left' class='p'>".date("Y-m-d")."</div>"; ?></a>
 		</li>
 	</ul>

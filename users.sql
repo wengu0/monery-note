@@ -102,10 +102,6 @@ CREATE TABLE `user` (
 -- 转存表中的数据 `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `password`, `name`, `email`) VALUES
-(1, 'admin', '123456', '罗杰', '2283758898@qq.com'),
-(9, 'hanpi', '000000', '憨批', '2283758898@qq.com'),
-(10, 'qwer', '000000', 'qweerer', '2283758898@qq.com');
 
 --
 -- 转储表的索引

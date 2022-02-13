@@ -10,7 +10,7 @@
     "icons" : {
         "72" : "icon.png"
     },
-    "launch_path" : "http://192.168.31.193:8080/php/money-note/login.php", /*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+    "launch_path" : "http://192.168.87.154:8080/php/money-note/home.php", /*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
     "developer" : {
         "name" : "", /*开发者名称*/
         "email" : "", /*开发者邮箱地址*/
@@ -38,7 +38,7 @@
     },
     "plus" : {
         "splashscreen" : {
-            "autoclose" : false, /*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+            "autoclose" : true, /*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
             "waiting" : true
         },
         "runmode" : "liberate", /*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
@@ -167,7 +167,8 @@
                     "hdpi" : "", /*高分屏启动图片，分辨率：480x762*/
                     "xhdpi" : "", /*720P高分屏启动图片，分辨率：720x1242*/
                     "xxhdpi" : ""
-                }
+                },
+                "androidStyle" : "common"
             },
             "plugins" : {
                 "speech" : {

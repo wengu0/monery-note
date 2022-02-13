@@ -72,7 +72,7 @@ if (isset($_COOKIE['username'])) {
 </head>
 <body>
 <header class="mui-bar mui-bar-nav mui-bar-nav-bg">
-    <a id="icon-menu" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <a id="icon-menu" class="mui-icon mui-icon-left-nav mui-pull-left"></a>
     <button type="button" class="btn btn-primary mui-pull-right" data-toggle="modal" data-target="#myModal">
     日期
 </button>
@@ -81,7 +81,7 @@ if (isset($_COOKIE['username'])) {
     <h1 class="mui-title"></h1>
     
 </header>
-<div style="background:url('bc.png') no-repeat;width:500px;height:170px">
+<div style="background:url('bc.png') no-repeat;width:100%;height:170px">
 <?php
 echo "<br>";
 echo "<br>";

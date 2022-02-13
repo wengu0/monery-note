@@ -28,7 +28,7 @@ require_once('connt.php');
 			    </div>
 			    <div class="mui-input-row">
 			        <label>密码：</label>
-			        <input name="password" id="password" type="password" class="mui-input-clear mui-input-password" placeholder="请输入密码">
+			        <input name="password" id="password" type="password" class="mui-input-clear0" placeholder="请输入密码">
 			    </div>
 			 </div>
 			<div class="mui-button-row" style="margin-top:30px">

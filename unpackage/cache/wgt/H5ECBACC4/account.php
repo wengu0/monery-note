@@ -24,7 +24,7 @@ $result=$link->query("select* from user where username like '{$_SESSION["usernam
     <a class="mui-action-back mui-icon  mui-pull-right mui-a-color"></a>
     <h1 class="mui-title">个人信息</h1>
 </header>
-<div style="background:url('bc.png') no-repeat;width:500px;height:170px"></div>
+<div style="background:url('bc.png') no-repeat;width:100%;height:170px"></div>
 </body>
 
 <?php
@@ -47,11 +47,11 @@ foreach ($result as $key => $value) {
                 </div>
                 <div class="mui-input-row">
 			        <label>旧密码：</label>
-			        <input name="used_password" id="username" type="text" class="mui-input-clear">
+			        <input name="used_password"  type="password" class="mui-input-clear">
 			    </div>
                 <div class="mui-input-row">
 			        <label>新密码：</label>
-			        <input name="new_password1" id="username" type="text" class="mui-input-clear">
+			        <input name="new_password1"  type="password" class="mui-input-clear">
 			    </div>
 			    <div class="mui-input-row">
 			        <label>确认密码：</label>

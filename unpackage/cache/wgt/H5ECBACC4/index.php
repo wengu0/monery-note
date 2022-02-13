@@ -30,22 +30,12 @@ foreach ($result2 as $key => $value) {
             
                   }
             $sum_out+=$arr['amount'];}
-//验证cookie是否有值
-// if (isset($_COOKIE['username'])) {
-//     # 若记住了用户信息,则直接传给Session
-//     $_SESSION['username'] = $_COOKIE['username'];
-//     $_SESSION['islogin'] = 1;
-//     }
-//     if (!isset($_SESSION['islogin'])) {
-//       echo"<script>var info = document.getElementById('info');
-//       mui.alert('你还没登录');location='login.php'</script>";  
-//     } 
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-   
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />  
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <title></title>
@@ -92,7 +82,7 @@ foreach ($result2 as $key => $value) {
     <h1 class="mui-title"></h1>
     
 </header>
-<div style="background:url('bc.png') no-repeat;width:500px;height:170px">
+<div style="background:url('bc.png') no-repeat;width:100%;height:170px">
 <?php
 echo "<br>";
 echo "<br>";
@@ -147,18 +137,19 @@ echo "&nbsp<p>收入".$sum_get."&nbsp&nbsp|支出".$sum_out."</p>"
 		<script src="js/mui.min.js"></script>
 		<script src="js/mui.picker.min.js"></script>
 		<script type="text/javascript">
-var beginTimeTake;
-            
+        var beginTimeTake;
+            //选择input name属性添加日期选择器
             $('input[name="data2"]').daterangepicker({
                 singleDatePicker: true,
                 showDropdowns: true,
                 autoUpdateInput: false,
-               
+            //设置日期格式
                 "locale": {
                     format: 'YYYY-MM-DD',
                     
                 }
             }, 
+            //开始结束日期设置
             function(start, end, label) {
                 beginTimeTake = start;
                 if(!this.startDate){
@@ -166,7 +157,8 @@ var beginTimeTake;
                 }else{
                     this.element.val(this.startDate.format(this.locale.format));
                 }
-            });var beginTimeTake;
+            });
+            var beginTimeTake;
             
             $('input[name="data1"]').daterangepicker({
                 singleDatePicker: true,

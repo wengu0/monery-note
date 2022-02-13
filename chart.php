@@ -52,7 +52,7 @@ $result10=$link->query("select title,sum(amount),type from booking,category wher
 </head>
 <body>
 <header class="mui-bar mui-bar-nav mui-bar-nav-bg">
-    <a id="icon-menu" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <a id="icon-menu" class="mui-icon mui-icon-left-nav mui-pull-left" href="index.php"></a>
     <a class="mui-action-back mui-icon  mui-pull-right mui-a-color">图表统计</a>
     <h1 class="mui-title"></h1>
 </header>
@@ -121,7 +121,7 @@ $result10=$link->query("select title,sum(amount),type from booking,category wher
 				</div>
 			</div>
 		</div>
-		<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+		
        
 		<script type="text/javascript">
 			// 基于准备好的dom，初始化echarts实例
@@ -172,7 +172,7 @@ $result10=$link->query("select title,sum(amount),type from booking,category wher
                 };
 
                             myChart.setOption(option);
-                            var myChart = echarts.init(document.getElementById('out1'));
+            var myChart = echarts.init(document.getElementById('out1'));
 			var option;
 			option = {
                 series: [
